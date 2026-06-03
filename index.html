@@ -1,74 +1,82 @@
 <!doctype html>
-<html lang="ja">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>K's App</title>
     <meta
       name="description"
-      content="K's App is a common developer site for app information and support."
+      content="K's App is a common support website for apps published by K's App."
     >
     <link rel="stylesheet" href="assets/style.css">
+    <script src="assets/script.js" defer></script>
   </head>
-  <body>
+  <body data-language="en">
     <div class="site-shell">
       <header class="site-header" aria-label="Site header">
         <a class="brand" href="index.html">K's App</a>
-        <nav class="nav" aria-label="Main navigation">
-          <a aria-current="page" href="index.html">Home</a>
-          <a href="apps.html">Apps</a>
-          <a href="about.html">About</a>
-          <a href="support.html">Support</a>
-        </nav>
+        <div class="header-actions">
+          <nav class="nav" aria-label="Main navigation">
+            <a aria-current="page" href="index.html">
+              <span data-lang="en">Home</span>
+              <span data-lang="jp">ホーム</span>
+            </a>
+            <a href="apps.html">
+              <span data-lang="en">Apps</span>
+              <span data-lang="jp">アプリ</span>
+            </a>
+            <a href="support.html">
+              <span data-lang="en">Support</span>
+              <span data-lang="jp">サポート</span>
+            </a>
+          </nav>
+          <div class="language-switch" aria-label="Language">
+            <button type="button" data-language-option="en" aria-pressed="true">EN</button>
+            <button type="button" data-language-option="jp" aria-pressed="false">JP</button>
+          </div>
+        </div>
       </header>
 
       <main>
         <section class="hero" aria-labelledby="home-title">
-          <div class="hero-copy">
-            <p class="section-label">Independent app development</p>
-            <h1 id="home-title">K's App</h1>
-            <p class="hero-text">
-              K's App is a common website for apps developed and published by
-              K's App. You can find app information and support links here.
+          <p class="section-label">Independent app development</p>
+          <h1 id="home-title">K's App</h1>
+          <div class="language-copy">
+            <p class="hero-text" data-lang="en">
+              A common support website for apps developed and published by
+              K's App.
             </p>
-            <div class="action-row" aria-label="Primary links">
-              <a class="button button-primary" href="apps.html">View Apps</a>
-              <a class="button button-secondary" href="support.html">Support</a>
-            </div>
+            <p class="hero-text" data-lang="jp">
+              K's Appが開発・公開するアプリのための共通サポートサイトです。
+            </p>
           </div>
-
-          <aside class="glass-panel hero-panel" aria-label="Site summary">
-            <div class="panel-line">
-              <span>Purpose</span>
-              <strong>Developer support site</strong>
-            </div>
-            <div class="panel-line">
-              <span>Pages</span>
-              <strong>Home / Apps / About / Support</strong>
-            </div>
-            <div class="panel-line">
-              <span>Use</span>
-              <strong>App Store support URL</strong>
-            </div>
-          </aside>
+          <div class="action-row" aria-label="Primary links">
+            <a class="button button-primary" href="apps.html">
+              <span data-lang="en">View Apps</span>
+              <span data-lang="jp">アプリを見る</span>
+            </a>
+            <a class="button button-secondary" href="support.html">
+              <span data-lang="en">Get Support</span>
+              <span data-lang="jp">サポートを見る</span>
+            </a>
+          </div>
         </section>
 
-        <section class="content-band" aria-labelledby="overview-title">
-          <div class="section-heading">
-            <p class="section-label">Overview</p>
-            <h2 id="overview-title">A simple home for app users.</h2>
-          </div>
-          <div class="card-grid">
-            <a class="glass-card linked-card" href="apps.html">
-              <span class="card-kicker">Apps</span>
-              <h3>Published apps</h3>
-              <p>Check current and upcoming apps from K's App.</p>
-            </a>
-            <a class="glass-card linked-card" href="support.html">
-              <span class="card-kicker">Support</span>
-              <h3>Need help?</h3>
-              <p>Find the support email and what to include in your message.</p>
-            </a>
+        <section class="info-section" aria-labelledby="about-title">
+          <div class="glass-card">
+            <p class="section-label">About</p>
+            <h2 id="about-title">
+              <span data-lang="en">Simple apps, clear support.</span>
+              <span data-lang="jp">シンプルなアプリと、わかりやすいサポート。</span>
+            </h2>
+            <p data-lang="en">
+              K's App creates focused apps for everyday use. This site provides
+              app information and support details for App Store users.
+            </p>
+            <p data-lang="jp">
+              K's Appは、日常で使いやすい小さなアプリを開発しています。このサイトでは、
+              App Store利用者向けにアプリ情報とサポート情報を掲載します。
+            </p>
           </div>
         </section>
       </main>
