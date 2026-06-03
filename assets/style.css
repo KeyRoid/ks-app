@@ -189,6 +189,10 @@ h1 {
   font-weight: 780;
 }
 
+.compact-hero h1 {
+  font-size: clamp(2.15rem, 5vw, 3.35rem);
+}
+
 h2 {
   font-size: clamp(1.45rem, 3.6vw, 2.15rem);
   font-weight: 720;
