@@ -49,7 +49,13 @@
   }
 
   document.addEventListener("DOMContentLoaded", function () {
-    applyLanguage(getStoredLanguage());
+    var requestedLanguage = new URLSearchParams(window.location.search).get("lang");
+    var hasRequestedLanguage = allowedLanguages.indexOf(requestedLanguage) !== -1;
+    var language = hasRequestedLanguage ? requestedLanguage : getStoredLanguage();
+    applyLanguage(language);
+    if (hasRequestedLanguage) {
+      saveLanguage(language);
+    }
     bindLanguageSwitch();
   });
 })();
